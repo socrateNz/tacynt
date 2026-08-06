@@ -75,6 +75,7 @@ export function Navbar() {
                       <div className="glass-dark rounded-2xl p-2.5 shadow-2xl shadow-black/40">
                         {products.map((product) => (
                           <Link
+                            target="_blank"
                             key={product.slug}
                             href={product.link}
                             className="flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-gray-50"
@@ -100,6 +101,7 @@ export function Navbar() {
               </div>
             ) : (
               <Link
+                target="_blank"
                 key={link.label}
                 href={link.href}
                 className="rounded-full px-4 py-2 text-sm text-slate-dark transition-colors hover:text-white"
@@ -137,6 +139,7 @@ export function Navbar() {
             <div className="flex flex-col gap-1 px-6 py-6">
               {navLinks.map((link) => (
                 <Link
+                  target="_blank"
                   key={link.label}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}

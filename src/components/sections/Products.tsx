@@ -40,7 +40,7 @@ export function Products() {
                     {product.description}
                   </p>
 
-                  <Link href={product.link} className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-deep-2 transition-colors group-hover:text-violet">
+                  <Link target="_blank" href={product.link} className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-deep-2 transition-colors group-hover:text-violet">
                     En savoir plus
                     <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </Link>
