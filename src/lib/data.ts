@@ -56,7 +56,7 @@ export const products: Product[] = [
     icon: UtensilsCrossed,
     gradient: "from-violet-2 to-cyan",
     sector: "Restauration",
-    link: "#"
+    link: "https://shede.tacynt.com/"
   },
   {
     slug: "meddoc",
@@ -67,7 +67,7 @@ export const products: Product[] = [
     icon: HeartPulse,
     gradient: "from-cyan to-deep-2",
     sector: "Santé",
-    link: "#"
+    link: "https://meddoc.tacynt.com/"
   },
   {
     slug: "etab",
@@ -78,7 +78,7 @@ export const products: Product[] = [
     icon: GraduationCap,
     gradient: "from-deep-2 to-violet",
     sector: "Éducation",
-    link: "#"
+    link: "https://etab.tacynt.com/"
   },
   {
     slug: "cv",
@@ -89,7 +89,7 @@ export const products: Product[] = [
     icon: FileUser,
     gradient: "from-violet to-violet-2",
     sector: "Carrière",
-    link: "#"
+    link: "https://cv.tacynt.com/"
   },
   {
     slug: "invoice",
@@ -100,7 +100,7 @@ export const products: Product[] = [
     icon: ReceiptText,
     gradient: "from-cyan-2 to-violet-2",
     sector: "Facturation",
-    link: "#"
+    link: "https://invoice.tacynt.com/"
   },
 ];
 
