@@ -146,13 +146,6 @@ export function Navbar() {
                 </Link>
               ))}
               <div className="mt-4 flex flex-col gap-3 border-t border-line-dark pt-5">
-                <Link
-                  href="#connexion"
-                  onClick={() => setMobileOpen(false)}
-                  className="rounded-full px-4 py-2.5 text-center text-sm font-medium text-white ring-1 ring-line-dark-strong"
-                >
-                  Connexion
-                </Link>
                 <Button href="#commencer" size="md" icon={false} className="w-full">
                   Commencer gratuitement
                 </Button>
