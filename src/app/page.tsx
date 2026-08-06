@@ -21,7 +21,7 @@ export default function Home() {
         <WhyChooseUs />
         <TacyntAI />
         <HowItWorks />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <FAQ />
         <CTA />
       </main>
