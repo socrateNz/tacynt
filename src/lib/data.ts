@@ -89,7 +89,7 @@ export const products: Product[] = [
     icon: FileUser,
     gradient: "from-violet to-violet-2",
     sector: "Carrière",
-    link: "https://cv.tacynt.com/"
+    link: "https://cv-facile.tacynt.com/"
   },
   {
     slug: "invoice",
