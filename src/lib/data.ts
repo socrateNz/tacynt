@@ -29,10 +29,10 @@ import {
 export const navLinks = [
   { label: "Solutions", href: "#solutions" },
   { label: "Produits", href: "#produits" },
-  { label: "Entreprises", href: "#pourquoi" },
-  { label: "Ressources", href: "#faq" },
-  { label: "Tarifs", href: "#demo" },
-  { label: "À propos", href: "#a-propos" },
+  { label: "Pourquoi Tacynt", href: "#pourquoi" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Processus", href: "#processus" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export type Product = {

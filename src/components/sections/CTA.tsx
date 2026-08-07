@@ -29,7 +29,7 @@ export function CTA() {
                 {/* <Button href="#commencer" size="lg">
                   Essayer gratuitement
                 </Button> */}
-                <Button href="#contact" variant="outline" size="lg" icon={false} className="text-white">
+                <Button href="/contact" variant="outline" size="lg" icon={false} className="text-white">
                   Contacter notre équipe
                 </Button>
               </div>

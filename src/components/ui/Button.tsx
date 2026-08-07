@@ -33,6 +33,7 @@ export function Button({
   icon = true,
   onClick,
   type = "button",
+  disabled = false,
 }: {
   children: ReactNode;
   href?: string;
@@ -42,8 +43,16 @@ export function Button({
   icon?: boolean;
   onClick?: () => void;
   type?: "button" | "submit";
+  disabled?: boolean;
 }) {
-  const classes = clsx(base, sizes[size], variants[variant], variant === "primary" && "btn-sheen", className);
+  const classes = clsx(
+    base,
+    sizes[size],
+    variants[variant],
+    variant === "primary" && "btn-sheen",
+    disabled && "pointer-events-none opacity-60",
+    className
+  );
   const style = variant === "primary" ? { backgroundImage: "var(--gradient-brand)" } : undefined;
 
   const content = (
@@ -64,7 +73,13 @@ export function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={clsx(classes, "group")} style={style}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={clsx(classes, "group")}
+      style={style}
+    >
       {content}
     </button>
   );

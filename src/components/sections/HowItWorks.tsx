@@ -16,7 +16,7 @@ export function HowItWorks() {
   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   return (
-    <section className="relative bg-paper py-24 sm:py-32">
+    <section id="processus" className="relative bg-paper py-24 sm:py-32">
       <Container>
         <SectionHeading
           align="center"

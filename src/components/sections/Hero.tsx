@@ -48,7 +48,7 @@ export function Hero() {
             <Button href="#produits" size="lg">
               Découvrir nos solutions
             </Button>
-            <Button href="#demo" variant="ghost" size="lg" icon={false} className="text-white">
+            <Button href="/contact" variant="ghost" size="lg" icon={false} className="text-white">
               Demander une démonstration
             </Button>
           </motion.div>

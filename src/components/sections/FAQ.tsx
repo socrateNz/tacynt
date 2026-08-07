@@ -33,7 +33,7 @@ export function FAQ() {
             </p>
           </Reveal>
           <Reveal delay={0.24}>
-            <Button href="#demo" variant="secondary" size="md" className="mt-8">
+            <Button href="/contact" variant="secondary" size="md" className="mt-8">
               Contacter notre équipe
             </Button>
           </Reveal>

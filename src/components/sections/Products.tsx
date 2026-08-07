@@ -63,13 +63,13 @@ export function Products() {
                   votre secteur, connectés à votre écosystème Tacynt.
                 </p>
               </div>
-              <a
-                href="#demo"
+              <Link
+                href="/contact"
                 className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-deep-2 transition-colors hover:text-violet"
               >
                 Parler à un expert
                 <ArrowUpRight className="size-4" />
-              </a>
+              </Link>
             </div>
           </RevealItem>
         </RevealGroup>

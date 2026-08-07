@@ -41,7 +41,7 @@ export function Navbar() {
       )}
     >
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between section-x py-3.5">
-        <Link href="#top" className="shrink-0">
+        <Link href="/" className="shrink-0">
           <Logo tone="dark" />
         </Link>
 
@@ -101,7 +101,6 @@ export function Navbar() {
               </div>
             ) : (
               <Link
-                target="_blank"
                 key={link.label}
                 href={link.href}
                 className="rounded-full px-4 py-2 text-sm text-slate-dark transition-colors hover:text-white"
@@ -113,7 +112,7 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href="#commencer" size="md" icon={false}>
+          <Button href="/contact" size="md" icon={false}>
             Commencer gratuitement
           </Button>
         </div>
