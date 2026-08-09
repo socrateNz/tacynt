@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getTransporter, contactNotificationEmail } from "@/lib/mailer";
+import { getTransporter, contactNotificationEmail, contactAutoReplyEmail } from "@/lib/mailer";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -46,11 +46,23 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: `"Tacynt — Formulaire de contact" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_TO_EMAIL,
+      bcc: process.env.CONTACT_BCC_EMAIL || undefined,
       replyTo: email.trim(),
       subject,
       text,
       html,
     });
+
+    try {
+      const autoReply = contactAutoReplyEmail({ name: name.trim(), message: message.trim() });
+      await transporter.sendMail({
+        from: `"Tacynt" <${process.env.SMTP_USER}>`,
+        to: email.trim(),
+        ...autoReply,
+      });
+    } catch (autoReplyError) {
+      console.error("Contact auto-reply email failed:", autoReplyError);
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {
