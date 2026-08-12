@@ -80,17 +80,17 @@ export const products: Product[] = [
     sector: "Éducation",
     link: "https://etab.tacynt.com/"
   },
-  {
-    slug: "cv",
-    name: "Tacynt CV",
-    tagline: "Carrière & recrutement",
-    description:
-      "Créez, optimisez et suivez des CV professionnels grâce à des recommandations générées par l'intelligence artificielle.",
-    icon: FileUser,
-    gradient: "from-violet to-violet-2",
-    sector: "Carrière",
-    link: "https://cv-facile.tacynt.com/"
-  },
+  // {
+  //   slug: "cv",
+  //   name: "Tacynt CV",
+  //   tagline: "Carrière & recrutement",
+  //   description:
+  //     "Créez, optimisez et suivez des CV professionnels grâce à des recommandations générées par l'intelligence artificielle.",
+  //   icon: FileUser,
+  //   gradient: "from-violet to-violet-2",
+  //   sector: "Carrière",
+  //   link: "https://cv-facile.tacynt.com/"
+  // },
   {
     slug: "invoice",
     name: "Tacynt Invoice",
