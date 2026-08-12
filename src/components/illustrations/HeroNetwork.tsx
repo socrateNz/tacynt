@@ -5,13 +5,18 @@ import { useId } from "react";
 import { products } from "@/lib/data";
 import { EASE_PREMIUM } from "@/lib/motion";
 
-const nodes = [
-  { ...products[0], x: 83, y: 16, path: "M50 50 C 64 37, 74 24, 83 16", delay: 0.1 },
-  { ...products[1], x: 15, y: 20, path: "M50 50 C 36 39, 24 28, 15 20", delay: 0.25 },
-  { ...products[2], x: 88, y: 62, path: "M50 50 C 68 53, 79 58, 88 62", delay: 0.4 },
-  { ...products[3], x: 11, y: 64, path: "M50 50 C 32 54, 20 59, 11 64", delay: 0.55 },
-  { ...products[4], x: 50, y: 93, path: "M50 50 C 50 68, 50 82, 50 93", delay: 0.7 },
+const nodePositions = [
+  { x: 83, y: 16, path: "M50 50 C 64 37, 74 24, 83 16", delay: 0.1 },
+  { x: 15, y: 20, path: "M50 50 C 36 39, 24 28, 15 20", delay: 0.25 },
+  { x: 88, y: 62, path: "M50 50 C 68 53, 79 58, 88 62", delay: 0.4 },
+  { x: 11, y: 64, path: "M50 50 C 32 54, 20 59, 11 64", delay: 0.55 },
+  { x: 50, y: 93, path: "M50 50 C 50 68, 50 82, 50 93", delay: 0.7 },
 ];
+
+const nodes = products.slice(0, nodePositions.length).map((product, i) => ({
+  ...product,
+  ...nodePositions[i],
+}));
 
 export function HeroNetwork() {
   const gradId = useId();
