@@ -24,6 +24,7 @@ import {
   MessageCircleQuestion,
   FileSearch,
   type LucideIcon,
+  Wallet,
 } from "lucide-react";
 
 export const navLinks = [
@@ -91,6 +92,18 @@ export const products: Product[] = [
   //   sector: "Carrière",
   //   link: "https://cv-facile.tacynt.com/"
   // },
+
+  {
+    slug: "money",
+    name: "Tacynt Money",
+    tagline: "Finances & épargne",
+    description:
+      "Comptes, budgets, objectifs et assistant IA réunis dans une seule application pour suivre, comprendre et faire grandir votre argent au quotidien.",
+    icon: Wallet,
+    gradient: "from-indigo to-violet",
+    sector: "Finance",
+    link: "https://money.tacynt.com/"
+  },
   {
     slug: "invoice",
     name: "Tacynt Invoice",
