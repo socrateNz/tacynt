@@ -28,7 +28,7 @@ import {
 } from "lucide-react";
 
 export const navLinks = [
-  { label: "Solutions", href: "#solutions" },
+  { label: "Solutions", href: "/#solutions" },
   { label: "Produits", href: "#produits" },
   { label: "Pourquoi Tacynt", href: "#pourquoi" },
   { label: "FAQ", href: "#faq" },
