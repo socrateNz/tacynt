@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Tacynt — L'intelligence qui fait avancer vos organisations",
   description:
     "Tacynt est une holding technologique africaine qui conçoit des plateformes SaaS et des solutions d'intelligence artificielle pour les entreprises, la santé, l'éducation et les organisations.",
-  metadataBase: new URL("https://tacynt.com"),
+  metadataBase: new URL("https://www.tacynt.com"),
   openGraph: {
     title: "Tacynt — L'intelligence qui fait avancer vos organisations",
     description:
