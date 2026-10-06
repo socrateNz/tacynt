@@ -7,7 +7,7 @@ import { products } from "@/lib/data";
 const columns = [
   {
     title: "Produits",
-    links: products.map((product) => ({ label: product.name, href: product.link })),
+    links: products.map((product) => ({ label: product.name, href: `/solutions/${product.slug}` })),
   },
   {
     title: "Entreprise",

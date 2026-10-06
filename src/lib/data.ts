@@ -45,6 +45,19 @@ export type Product = {
   gradient: string;
   sector: string;
   link: string;
+  seoTitle: string;
+  seoDescription: string;
+  features: { title: string; description: string }[];
+  audience: string[];
+  // Images à placer dans public/solutions/<slug>/ (ex. src: "/solutions/shede/hero.png").
+  // Tant qu'elles sont absentes, la page affiche un visuel de remplacement.
+  image?: ProductImage;
+  screenshots?: ProductImage[];
+};
+
+export type ProductImage = {
+  src: string;
+  alt: string;
 };
 
 export const products: Product[] = [
@@ -57,7 +70,17 @@ export const products: Product[] = [
     icon: UtensilsCrossed,
     gradient: "from-violet-2 to-cyan",
     sector: "Restauration",
-    link: "https://shede.tacynt.com/"
+    link: "https://shede.tacynt.com/",
+    seoTitle: "Tacynt Shede — Logiciel de gestion pour restaurants, bars et hôtels",
+    seoDescription:
+      "Tacynt Shede centralise commandes, tables, stocks et facturation pour restaurants, bars et hôtels. Une plateforme cloud simple pour piloter votre établissement.",
+    features: [
+      { title: "Prise de commandes", description: "Enregistrez les commandes en salle, au comptoir ou à emporter et transmettez-les instantanément en cuisine." },
+      { title: "Tables & chambres", description: "Visualisez l'occupation de vos tables et chambres en temps réel." },
+      { title: "Stocks & approvisionnements", description: "Suivez vos consommations et anticipez les ruptures avant qu'elles n'arrivent." },
+      { title: "Facturation & encaissement", description: "Éditez additions et factures en un clic et suivez votre chiffre d'affaires." },
+    ],
+    audience: ["Restaurants", "Bars & lounges", "Hôtels", "Fast-foods"],
   },
   {
     slug: "meddoc",
@@ -68,7 +91,17 @@ export const products: Product[] = [
     icon: HeartPulse,
     gradient: "from-cyan to-deep-2",
     sector: "Santé",
-    link: "https://meddoc.tacynt.com/"
+    link: "https://meddoc.tacynt.com/",
+    seoTitle: "Tacynt MedDoc — Logiciel de gestion de clinique et dossier patient",
+    seoDescription:
+      "Tacynt MedDoc centralise dossiers patients, rendez-vous et parcours de soin pour hôpitaux, cliniques et centres de santé, sur un ou plusieurs sites.",
+    features: [
+      { title: "Dossier patient informatisé", description: "Antécédents, consultations et documents réunis dans un dossier unique et sécurisé." },
+      { title: "Rendez-vous", description: "Planifiez les consultations et réduisez l'attente grâce à un agenda partagé." },
+      { title: "Parcours de soin", description: "Suivez chaque patient de l'accueil à la sortie, entre tous les services." },
+      { title: "Multi-sites", description: "Coordonnez plusieurs établissements depuis une seule plateforme." },
+    ],
+    audience: ["Hôpitaux", "Cliniques", "Centres de santé", "Cabinets médicaux"],
   },
   {
     slug: "etab",
@@ -79,7 +112,17 @@ export const products: Product[] = [
     icon: GraduationCap,
     gradient: "from-deep-2 to-violet",
     sector: "Éducation",
-    link: "https://etab.tacynt.com/"
+    link: "https://etab.tacynt.com/",
+    seoTitle: "Tacynt Etab — Logiciel de gestion scolaire",
+    seoDescription:
+      "Tacynt Etab simplifie la gestion scolaire : inscriptions, notes, bulletins, emplois du temps et communication avec les parents, pour tous les établissements.",
+    features: [
+      { title: "Inscriptions", description: "Gérez admissions, réinscriptions et dossiers élèves sans paperasse." },
+      { title: "Notes & bulletins", description: "Saisissez les notes et générez les bulletins automatiquement." },
+      { title: "Emplois du temps", description: "Organisez classes, enseignants et salles en quelques clics." },
+      { title: "Communication", description: "Informez parents, élèves et enseignants en temps réel." },
+    ],
+    audience: ["Écoles primaires", "Collèges & lycées", "Universités", "Centres de formation"],
   },
   // {
   //   slug: "cv",
@@ -102,7 +145,17 @@ export const products: Product[] = [
     icon: Wallet,
     gradient: "from-indigo to-violet",
     sector: "Finance",
-    link: "https://money.tacynt.com/"
+    link: "https://money.tacynt.com/",
+    seoTitle: "Tacynt Money — Application de gestion de budget et d'épargne",
+    seoDescription:
+      "Tacynt Money réunit comptes, budgets, objectifs d'épargne et assistant IA pour suivre, comprendre et faire grandir votre argent au quotidien.",
+    features: [
+      { title: "Comptes", description: "Regroupez tous vos comptes et suivez vos soldes en un coup d'œil." },
+      { title: "Budgets", description: "Fixez des limites par catégorie et maîtrisez vos dépenses." },
+      { title: "Objectifs d'épargne", description: "Définissez vos projets et suivez votre progression mois après mois." },
+      { title: "Assistant IA", description: "Obtenez des analyses et des conseils personnalisés sur vos finances." },
+    ],
+    audience: ["Particuliers", "Familles", "Indépendants", "Jeunes actifs"],
   },
   {
     slug: "invoice",
@@ -113,7 +166,17 @@ export const products: Product[] = [
     icon: ReceiptText,
     gradient: "from-cyan-2 to-violet-2",
     sector: "Facturation",
-    link: "https://invoice.tacynt.com/"
+    link: "https://invoice.tacynt.com/",
+    seoTitle: "Tacynt Invoice — Logiciel de facturation et devis en ligne",
+    seoDescription:
+      "Tacynt Invoice génère, suit et archive factures, devis, bons de commande et ordres de mission en quelques secondes.",
+    features: [
+      { title: "Factures & devis", description: "Créez des documents professionnels à vos couleurs en quelques secondes." },
+      { title: "Bons de commande", description: "Émettez et suivez vos bons de commande auprès de vos fournisseurs." },
+      { title: "Ordres de mission", description: "Préparez et validez les ordres de mission de vos équipes." },
+      { title: "Suivi & archivage", description: "Retrouvez chaque document et suivez les paiements en attente." },
+    ],
+    audience: ["PME", "Indépendants", "Cabinets", "Services administratifs"],
   },
 ];
 
