@@ -25,6 +25,7 @@ import {
   FileSearch,
   type LucideIcon,
   Wallet,
+  ShoppingCart,
 } from "lucide-react";
 
 export const navLinks = [
@@ -178,6 +179,27 @@ export const products: Product[] = [
     ],
     audience: ["PME", "Indépendants", "Cabinets", "Services administratifs"],
   },
+  {
+    slug: "shop",
+    name: "Tacynt Shop",
+    tagline: "Commerce & distribution",
+    description:
+      "Caisse, stock, clients et vitrine en ligne réunis dans une seule plateforme — fonctionne même sans connexion internet.",
+    icon: ShoppingCart,
+    gradient: "from-violet to-cyan-2",
+    sector: "Commerce",
+    link: "https://shop.tacynt.com/",
+    seoTitle: "Tacynt Shop — Logiciel de caisse et gestion de boutique",
+    seoDescription:
+      "Tacynt Shop centralise caisse hors ligne, stock, fidélité et vitrine en ligne pour les commerces multi-boutiques, avec paiement Mobile Money.",
+    features: [
+      { title: "Caisse hors ligne", description: "Encaissez même sans connexion internet — synchronisation automatique au retour du réseau." },
+      { title: "Multi-boutique", description: "Gérez plusieurs boutiques et postes de caisse depuis un seul compte." },
+      { title: "Stock & fidélité", description: "Suivi de stock avancé, programme de fidélité et historique d'achats par client." },
+      { title: "E-commerce & paiement mobile", description: "Vitrine en ligne connectée à votre stock, paiement par Orange Money et MTN MoMo." },
+    ],
+    audience: ["Commerces de détail", "Supérettes & épiceries", "Pharmacies", "Boutiques multi-sites"],
+  },
 ];
 
 export type Stat = {
@@ -289,7 +311,7 @@ export const faqs = [
   {
     question: "Puis-je utiliser plusieurs produits Tacynt à la fois ?",
     answer:
-      "Oui. Chaque produit est indépendant mais partage la même infrastructure, permettant de combiner Shede, MedDoc, Etab, CV ou Invoice selon vos besoins, avec une facturation unifiée.",
+      "Oui. Chaque produit est indépendant mais partage la même infrastructure, permettant de combiner Shede, MedDoc, Etab, Money, Invoice ou Shop selon vos besoins, avec une facturation unifiée.",
   },
   {
     question: "Comment l'intelligence artificielle est-elle utilisée ?",
